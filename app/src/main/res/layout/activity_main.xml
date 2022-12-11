@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Analog Clock"
+        android:layout_marginTop="20dp"
+        android:id="@+id/analog_text"></TextView>
+
+    <AnalogClock
+        android:id="@+id/analog_clock"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/analog_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digital Clock"
+        android:layout_below="@+id/analog_clock"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/digital_text">
+    </TextView>
+
+    <DigitalClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/digital_text"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/digital_clock"></DigitalClock>
+
+
+    <TextClock
+        android:id="@+id/textdateid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:format12Hour="MMM dd , yyyy"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/digital_clock"
+        />
+
+    <Button
+        android:id="@+id/btnTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/digital_clock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="139dp"
+        android:text="Timer" />
+
+</RelativeLayout>
